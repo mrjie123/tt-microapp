@@ -1,0 +1,32 @@
+{
+    "name": "juxing/tt-microapp",
+    "description": "字节跳动小程序sdk copy from composer require 96qbhy/tt-microapp",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "juxing",
+            "email": "105182332@qq.com"
+        }
+    ],
+    "require": {
+        "hanson/foundation-sdk": "^3.0",
+        "ext-json": "*",
+        "php": ">=7.0",
+        "ext-openssl": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Juxing\\TtMicroApp\\": "src/"
+        },
+        "files": [
+            "src/Support/helper.php"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Juxing\\TtMicroApp\\LaravelServiceProvider"
+            ]
+        }
+    }
+}
