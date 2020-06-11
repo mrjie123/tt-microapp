@@ -39,8 +39,9 @@ class Payment
             'wx_url' => $optional['wx_url'] ?? '',
             'alipay_url' => $optional['alipay_url'] ?? '',
         ];
-
-        $data['sign'] = $this->sign($data);
+        $temp = $data;
+        unset($temp['risk_info']);
+        $data['sign'] = $this->sign($temp);
 
         return $data;
 
